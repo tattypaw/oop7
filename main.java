@@ -1,5 +1,6 @@
 import java.util.Date;
 
+puplic class main {
 public static void main(String[] args) {
         Calculator c1 = new Calculator(2, 3);
         Calculator c2 = new Calculator(3, 4);
@@ -28,5 +29,6 @@ public static void main(String[] args) {
 // логирование действий пользователя
 public static void logAction(String message, Date date) {
 // код для записи действий в файл или базу данных
+}
 }
 }
