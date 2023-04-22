@@ -1,0 +1,51 @@
+public class Calculator {
+
+private double real;
+private double imaginary;
+
+public Calculator(double r, double i) {
+real = r;
+imaginary = i;
+}
+
+public void add(Calculator c) {
+real += c.real;
+imaginary += c.imaginary;
+}
+
+public void subtract(Calculator c) {
+real -= c.real;
+imaginary -= c.imaginary;
+}
+
+public void multiply(Calculator c) {
+double tempReal = real;
+double tempImaginary = imaginary;
+real = (tempReal * c.real) - (tempImaginary * c.imaginary);
+imaginary = (tempReal * c.imaginary) + (tempImaginary * c.real);
+}
+
+public void divide(Calculator c) {
+double tempReal = real;
+double tempImaginary = imaginary;
+double temp = (c.real * c.real) + (c.imaginary * c.imaginary);
+real = ((tempReal * c.real) + (tempImaginary * c.imaginary)) / temp;
+imaginary = ((tempImaginary * c.real) - (tempReal * c.imaginary)) / temp;
+}
+
+public double getReal() {
+return real;
+}
+
+public double getImaginary() {
+return imaginary;
+}
+
+public void setReal(double real) {
+this.real = real;
+}
+
+public void setImaginary(double imaginary) {
+this.imaginary = imaginary;
+}
+
